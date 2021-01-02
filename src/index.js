@@ -5,18 +5,18 @@ import App from './components/App';
 
 import {
   ApolloProvider,
-  ApolloProviderClient,
+  ApolloClient,
   createHttpLink,
-  InMemoryCatch
+  InMemoryCache
 } from '@apollo/client';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:4000'
 })
 
-const client = newApolloClient({
+const client = new ApolloClient({
   link: httpLink,
-  cache: new InMemoryCatch()
+  cache: new InMemoryCache()
 })
 
 ReactDOM.render(

@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
-import '../styles/App.css'
+import React, { Component } from 'react'
+import LinkList from './LinkList'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Test</h1>
-    </div>
-  );
+export class App extends Component {
+  render() {
+    return (
+      <LinkList />
+    )
+  }
 }
 
-export default App;
+export default App
